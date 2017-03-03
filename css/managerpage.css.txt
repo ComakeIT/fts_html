@@ -1,0 +1,18 @@
+
+
+
+.header{
+
+  min-height:20px;
+  border-bottom: 0.8px solid #D0CFCE;
+
+}
+
+.box{
+
+ border:0.8px solid #D0CFCE;
+ border-radius:5px;
+
+
+
+}

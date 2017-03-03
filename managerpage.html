@@ -1,0 +1,193 @@
+<html>
+ <head>
+   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="jquery.js" ></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+ integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js" ></script>
+ <link rel="stylesheet" href="css/manager.css">
+ 
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  </head>
+  
+    <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      theme: "theme2",
+      title:{
+        text: "Cost of Pricing modals"
+      },
+      animationEnabled: true,
+      axisX: {
+        valueFormatString: "MMM",
+        interval:1,
+        intervalType: "text"
+        
+      },
+      axisY:{
+        includeZero: false
+        
+      },
+      data: [
+      {        
+        type: "line",
+        //lineThickness: 3,        
+        dataPoints: [
+        { x: new Date(2012, 00, 1), y: 450 },
+        { x: new Date(2012, 01, 1), y: 414},
+        { x: new Date(2012, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+        { x: new Date(2012, 03, 1), y: 460 },
+       
+        
+        ]
+      }
+      
+      
+      ]
+    });
+
+chart.render();
+}
+</script>
+  
+  <body style="font-family: 'Quicksand', sans-serif;background:#EEEEEE">
+      <header class="header" style="background:#fff">
+          <img src="images/logo.png" height="70" width="220" style="padding:15px;" >
+        </header>
+      <div class="container-fluid">
+          <div class="row margint" >
+           <div class="col-md-2">
+            <div class="container box  ">
+             <figure>
+               <img src="images/contact-mage.jpg" height="200" style="padding-top:30px;margin-left:70px;" width="160" align="middle"> </figure>
+                  <div class="">
+            <div class=" ">
+              <table class="table margint">
+                 <thead>
+                  <tr>
+                   <th class="text-center">Asish (Manager)</th>
+                   
+                 </tr>
+               </thead>
+               <tbody>
+               <tr>
+               <td class="text-center">Team 1</td>
+              </tr>
+            <tr>
+            <td class="text-center">Team 2</td>
+          </tr>
+          <tr>
+            <td class="text-center">Team 3</td>  
+        </tr>
+      </tbody>
+     </table>
+           
+            </div>
+          </div>
+            </div>
+           </div>
+           <div class="col-md-6 col-md-offset-1">
+
+             <div class="row">
+             
+              <div class="col-md-4 box2" data-toggle="modal" data-target="#myModal">
+                
+               <p class="text-center" style="word-break:break-all">Employees reporting you</p>
+
+             </div>
+             <div class="col-md-4 box2">
+              <p class="text-center" style="word-break:break-all">Check non-billable employees</p>
+           
+             </div>
+             <div class="col-md-4 box2">
+              <p class="text-center" style="word-break:break-all">employees completing tenure</p>
+
+             </div>
+             
+             </div>
+               <div class="row margint">
+              <div class="col-md-4 box2">
+               <p class="text-center" style="word-break:break-all">Customer Agreements</p>
+
+             </div>
+             <div class="col-md-4 box2">
+              <p class="text-center" style="word-break:break-all">Allote procurments,Reources</p>
+           
+             </div>
+             <div class="col-md-4 box2">
+              <p class="text-center" style="word-break:break-all">Find customers basing on price models</p>
+
+             </div>
+             
+             </div>
+           <div class="row margint">
+            <div class="col-md-12">
+             <div id="chartContainer" style="height: 300px; width: 100%;">
+
+            </div>
+
+
+           </div>
+          </div>
+       
+      </div>
+      <div class="col-md-3  text-center box3">
+         <h class="text-center" style="padding:top:50px;border-bottom:0.8px solid #D0CFCE;">Backlog</h>
+         </div>  
+</div>
+    <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Employees</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+        <thead>
+            <tr>
+                <th>DOJ</th>
+                <th> Name</th>
+                <th>Salary</th>
+                <th>CTC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1/jan/17</td>
+                <td>John</td>
+                <td>25000</td>
+                <td>2,50,000 p/a</td>
+            </tr>
+            <tr>
+               <td>1/jan/17</td>
+                <td>John</td>
+                <td>25000</td>
+                <td>2,50,000 p/a</td>
+            </tr>
+            <tr>
+               <td>1/jan/17</td>
+                <td>John</td>
+                <td>25000</td>
+                <td>2,50,000 p/a</td>
+            </tr>
+        </tbody>
+    </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+   </body>
+<html>
