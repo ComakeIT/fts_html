@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+
 <html>
  <head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
   integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular-route.min.js"></script>
+<script type="text/javascript" src="javascript/libraries/angular.min.js"></script>
 
+<script type="text/javascript" src="javascript/libraries/jquery.js"></script>
+<script type="text/javascript" src="javascript/ftsApp.js"></script>
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -14,7 +23,7 @@
  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
  </head>
    
- <body style="font-family: 'Quicksand', sans-serif;">
+ <body style="font-family: 'Quicksand', sans-serif;" ng-app="ftsApp">
   <header class="header2">
      <div class="row">
        <div class="col-md-4">
@@ -27,7 +36,22 @@
      </header>
    
      <div class="row margint">
-        <div class="col-md-4 col-md-offset-4">
+       <div class="col-md-6 col-md-offset-1">
+        <article>
+         <p style="font-size:55px">Welcome to latest FTS </p>
+          <div style="font-size:21px;">
+           <p>Login to access and manage the projects status.</p>
+           <p>Moniter the project flow.</p>
+           <p>Allocate Resources.</p>
+             <p>Personalize To-Do.</p>
+           <p>Estimate profits.</p>
+         
+ 
+
+          </div>
+         </article> 
+       </div>
+        <div class="col-md-4">
          <div class="">
 
          <header class="header3 text-center" style="border-top-left-radius: 5px;
@@ -35,7 +59,7 @@
           <h1 style="font-size:26px;">Login</h1>
        </header>
 
-      <div class="card">
+      <div class="card" ng-controller="LoginCtrl">
       <form class="marginsmall" style="padding:15px;">
             <div class="form-group">
             <label for="exampleInputEmail1">User ID</label>
@@ -46,7 +70,7 @@
           <label for="exampleInputPassword1">Password</label>
          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
-        <a href="#" class="btn btn-success" style="border:none">Login</a>
+        <a href="#" class="btn btn-info" ng-click="gomanager()" style="border:none">Login</a>
         </form> 
     
       </div>
@@ -57,7 +81,25 @@
        
       </div>
     </div>
-      <footer class="footer" style="margin-top:420px"></footer>
+    <div class="container-fluid">
+    <div class="row" style="margin-top:160px;">
+      <div class="col-md-3 col-md-offset-1">
+            <span class="glyphicon glyphicon-plane" style="font-size:180px;color:orange"></span><br>
+            <p class="margint" style="font-size:16px;">Track status online while travel</p>
+      </div>
+       <div class="col-md-3 col-md-offset-1">
+            <span class="glyphicon glyphicon-random" style="font-size:180px;color:orange"></span><br>
+            <p class="margint" style="font-size:16px;"> Multitasking in less time </p>
+      </div>
+      <div class="col-md-3 col-md-offset-1">
+            <span class="glyphicon glyphicon-flash" style="font-size:180px;color:orange"></span><br>
+            <p class="margint" style="font-size:16px;">Observe the optimized results</p>
+      </div>
+     </div>
+    </div>
+    <footer class="footer margint" >
+      <span style="color:#fff;padding:5px;">Copyright @ xxxxx 2017</span>
+    </footer>
 </body>
 
 <html>
